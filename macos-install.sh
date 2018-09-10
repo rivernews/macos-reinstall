@@ -34,7 +34,8 @@ brew tap caskroom/cask
 brew cask install google-chrome visual-studio-code google-drive-file-stream wechat
 
 # optional GUI
-brew cask install slack
+brew cask install slack \
+sequel-pro
 
 # CLI
 # for now, install just python 3.6 instead of 3.7
@@ -45,3 +46,6 @@ node
 
 # install angular-cli
 npm install -g @angular/cli
+
+# for AI project work
+brew install mysql
