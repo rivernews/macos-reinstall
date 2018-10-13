@@ -2,9 +2,6 @@
 #         PREFIX SETUP         #
 ################################
 
-##### Zsh customization
-ZSH_THEME="powerlevel9k/powerlevel9k"
-
 # Shorter prompt
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rbenv vcs)
 # POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)

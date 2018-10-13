@@ -7,6 +7,10 @@
 #         SUFFIX SETUP         #
 ################################
 
+##### Zsh customization
+# have to put here at suffix because default .zshrc defined ZSH_THEME, we want to overwrite it.
+ZSH_THEME="powerlevel9k/powerlevel9k" 
+
 plugins=(
   git
   zsh-autosuggestions
