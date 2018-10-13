@@ -27,7 +27,7 @@ git config --global user.email shaungc@umich.edu
 #####
 
 # install brew. See https://brew.sh
-# /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # GUI
 brew tap caskroom/cask
@@ -37,6 +37,10 @@ brew cask install google-chrome visual-studio-code google-drive-file-stream wech
 brew cask install slack \
 sequel-pro
 
+
+
+
+# Git Projects
 # CLI
 # for now, install just python 3.6 instead of 3.7
 # brew install python3 
@@ -48,4 +52,4 @@ node
 npm install -g @angular/cli
 
 # for AI project work
-brew install mysql
+# brew install mysql
