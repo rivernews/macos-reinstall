@@ -10,9 +10,9 @@ git config --global credential.helper osxkeychain
 
 # Set merge tool to vscode
 git config --global merge.tool vscode
-git config --global mergetool.vscode.cmd "code --wait $MERGED"
+git config --global mergetool.vscode.cmd 'code --wait $MERGED'
 git config --global diff.tool vscode
-git config --global difftool.vscode.cmd "code --wait --diff $LOCAL $REMOTE"
+git config --global difftool.vscode.cmd 'code --wait --diff $LOCAL $REMOTE'
 
 # Setup user name and email
 git config --global user.name "Shaung Cheng"

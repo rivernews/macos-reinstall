@@ -21,3 +21,25 @@ source $ZSH/oh-my-zsh.sh
 
 # prevent percentage sign at top in vscode. See https://github.com/zeit/hyper/issues/2144
 unsetopt PROMPT_SP
+
+##### Oh My Zsh Setup End #####
+
+
+
+
+
+################################
+#     BASH CUSTOME EXPORT      #
+################################
+
+# mysql
+#export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+
+# pyenv
+if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init -)"
+fi
+
+# golang
+# export GOPATH=$HOME/go
+# export PATH=$PATH:$GOPATH/bin
