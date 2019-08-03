@@ -9,3 +9,16 @@ Due to misterious reason (or just poorly developed app). Good way to analyze sto
 Then it's time to consider reinstalling OS.
 
 Always painful thing to do. ...wait, is it? As long as we keep the most important things small, we should be able to go cloud, and then go light on local!
+
+Things to back up
+- Software app
+    - Manually installed
+    - GUI cask installed
+    - Command line installed
+- Software app configs
+- Github repo: git push all changes
+- Github repo: credentials that are excluded from version control
+- User Data
+    - Check /Downloads/
+    - Check /Desktop/
+    ...

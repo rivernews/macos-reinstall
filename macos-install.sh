@@ -1,3 +1,35 @@
+#!/usr/bin/env bash
+
+
+
+
+
+# user input
+#
+#####
+
+echo "Enter user full name (for git):"
+read USER_FULL_NAME
+echo "Enter user email (for git):"
+read USER_EMAIL
+
+echo full name is ${USER_FULL_NAME}
+echo email is ${USER_EMAIL}
+
+while true; do
+    echo "Confirm the inputs are correct [YyNn]?"
+    read yn
+    case $yn in
+        [Yy]* ) echo Will proceed now...; break;;
+        [Nn]* ) return;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
+
+
+
+
+
 
 # config git
 #
@@ -15,45 +47,50 @@ git config --global diff.tool vscode
 git config --global difftool.vscode.cmd 'code --wait --diff $LOCAL $REMOTE'
 
 # Setup user name and email
-git config --global user.name "Shaung Cheng"
-git config --global user.email shaungc@umich.edu
+git config --global user.name ${USER_FULL_NAME}
+git config --global user.email ${USER_EMAIL}
 
 
 
 
 
-# software installation
+
+
+# command line installation
 #
 #####
 
 # install brew. See https://brew.sh
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-# GUI
+# pyenv is config in zsh script (beautify-terminal)
+brew install pyenv node
+
+
+
+
+
+
+# GUI software installation
+#
+#####
+
+# install GUI apps
 brew tap caskroom/cask
 brew cask install google-chrome visual-studio-code google-drive-file-stream wechat
 
-# optional GUI
-brew cask install slack \
-sequel-pro
 
 
 
 
-# Git Projects
-# CLI
-# for now, install just python 3.6 instead of 3.7
-# brew install python3 
+
+# Reference
+#
+#####
 
 # Just for macOS Mojave: pip might not work, use this solution to fix:
 # https://github.com/Homebrew/homebrew-core/issues/29176#issuecomment-398656987
-brew udpate && sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
-brew install \
-https://raw.githubusercontent.com/Homebrew/homebrew-core/f2a764ef944b1080be64bd88dca9a1d80130c558/Formula/python.rb \
-node
-
-# install angular-cli
-npm install -g @angular/cli
-
-# for AI project work
-# brew install mysql
+# brew udpate && sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
+# brew install \
+# https://raw.githubusercontent.com/Homebrew/homebrew-core/f2a764ef944b1080be64bd88dca9a1d80130c558/Formula/python.rb \
+# node

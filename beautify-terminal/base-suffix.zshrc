@@ -35,7 +35,7 @@ unsetopt PROMPT_SP
 # mysql
 #export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
-# pyenv
+# pyenv config: https://github.com/pyenv/pyenv#homebrew-on-macos
 if command -v pyenv 1>/dev/null 2>&1; then
     eval "$(pyenv init -)"
 fi
