@@ -76,3 +76,4 @@ Bonus
   - Install `sync settings` extension, then, download the settings. Will need the gist ID or github token. Ours is at [google doc](https://docs.google.com/document/d/1GGaX4JhbbBAzFxMvFRIvef7nMDdFpmi_ZGQ7Evnvbno/edit). (You can store it somewhere else, just remember not to check into version control since this is a credential)
   - Install the terminal beautify script
 - `optional-cli.sh` and `optional-gui.sh` - you can cherry pick apps that you want to install.
+- Open Google Drive Stream to configure for the first time.
