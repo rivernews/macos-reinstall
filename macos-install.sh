@@ -38,6 +38,7 @@ done
 echo "INFO: setting git..."
 
 # Set git to use the osxkeychain credential helper
+# This will let git remember your credential after you input credentials for the first time
 git config --global credential.helper osxkeychain
 
 # Set merge tool to vscode
