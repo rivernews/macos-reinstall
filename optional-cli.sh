@@ -1,5 +1,5 @@
 # brew install mysql
-# brew install postgresql
+brew install postgresql
 
 # brew install doctl
 

@@ -60,8 +60,10 @@ git config --global user.email ${USER_EMAIL}
 #
 #####
 
-# install brew. See https://brew.sh
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# install brew silently. See https://brew.sh
+# the last "</dev/null" is to silent install prompt, see https://stackoverflow.com/a/25535532
+printf "INFO: installing brew..."
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" </dev/null
 
 # pyenv is config in zsh script (beautify-terminal)
 brew install pyenv node

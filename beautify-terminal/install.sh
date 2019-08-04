@@ -8,9 +8,11 @@
 echo -e "INFO: Installing iterm2..." && \
 brew cask install iterm2 && \
 
-echo -e "INFO: Follow the web article we opened for you, import the color scheme in iTerm2. After you finish, don't close iTerm2, we'll use it again later." && \
+echo -e "INFO: Follow the web article we opened for you, import the color scheme in iTerm2." && \
+printf "After importing color schema, make sure to open the dropdown list again, and select the imported color schema." && \
+printf "After you finish, don't close iTerm2, we'll use it again later.\n" && \
 open "https://medium.com/@Clovis_app/configuration-of-a-beautiful-efficient-terminal-and-prompt-on-osx-in-7-minutes-827c29391961" && \
-read -n 1 -s -r -p "INFO: Press any key to continue...\n" key_pressed && \
+read -n 1 -s -r -p $'INFO: Press any key to continue...\n' key_pressed && \
 # -n defines the required character count to stop reading
 # -s hides the user's input
 # -r causes the string to be interpreted "raw" (without considering backslash escapes)
@@ -24,7 +26,8 @@ echo -e "INFO: Installing patched font..." && \
 cp "Meslo LG M Regular for Powerline.ttf" ~/Library/Fonts && \
 
 echo -e "INFO: Set the font 'Meslo LG M Regular for Powerline' in iTerm2" && \
-read -n 1 -s -r -p "INFO: Press any key to continue...\n" key_pressed && \
+printf "After you finish, don't close iTerm2, we'll use it again later.\n" && \
+read -n 1 -s -r -p $'INFO: Press any key to continue...\n' key_pressed && \
 
 
 
@@ -56,8 +59,8 @@ cat base-suffix.zshrc >> ~/.zshrc
 
 # 5. Final tweaking
 # Enable text editor navigation
-echo -e "INFO: Set Vertical cursor and Text navigation with keyboard in iTerm2" && \
-read -n 1 -s -r -p "INFO: Press any key to continue...\n" key_pressed && \
+echo -e "INFO: Set text navigation with keyboard in iTerm2 (no need to change cursor - just use default Box)" && \
+read -n 1 -s -r -p $'INFO: Press any key to continue...\n' key_pressed && \
 
 # Auto suggestions (for Oh My Zsh)
 echo -e "INFO: Installing Auto suggestions (for Oh My Zsh)..."
@@ -73,8 +76,8 @@ fi
 
 
 # 6. Visual Studio Code config
-echo -e 'INFO: Set vscode "terminal.integrated.fontFamily": "Meslo LG M for Powerline"' && \
-read -n 1 -s -r -p "INFO: Press any key to continue...\n" key_pressed && \
+echo -e 'INFO: Set vscode "terminal.integrated.fontFamily": "Meslo LG M for Powerline"; also set shell used by vscode terminal to zsh.' && \
+read -n 1 -s -r -p $'INFO: Press any key to continue...\n' key_pressed && \
 
 echo "INFO: SUCCESS." && return 
 
