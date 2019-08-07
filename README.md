@@ -11,16 +11,16 @@ Then it's time to consider reinstalling OS.
 Always painful thing to do. ...wait, is it? As long as we keep the most important things small, we should be able to go cloud, and then go light on local!
 
 Things to back up
-- Software app
-    - Manually installed
-    - GUI cask installed
-    - Command line installed
-- Software app configs
-- Github repo: git push all changes
-- Github repo: credentials that are excluded from version control
-- User Data
-    - Check /Downloads/
-    - Check /Desktop/
+- [ ] Software app
+    - [ ] Manually installed
+    - [ ] GUI cask installed
+    - [ ] Command line installed
+- [ ] Software app configs
+- [ ] Github repo: git push all changes
+- [ ] Github repo: credentials that are excluded from version control
+- [ ] User Data
+    - [ ] Check /Downloads/
+    - [ ] Check /Desktop/
     ...
 
 ## Creating bootable USB
@@ -59,21 +59,30 @@ Bonus
 
 ## Initial Setup
 
-- Download XCode, AND open it for the first time. This will install the commandline tools for you. Please complete this step before proceeding, otherwise tools cannot be installed.
+- [ ] Download XCode, AND open it for the first time. This will install the commandline tools for you. Please complete this step before proceeding, otherwise tools cannot be installed.
+
+### Setup System preferences
+
 - Configure for trackpad 
-  - increase mouse pointer speed 
-  - enable App Expose - use 4 fingers
-  - drag in accessibility
+  - [ ] increase mouse pointer speed 
+  - [ ] enable App Expose - use 4 fingers
+  - [ ] drag in accessibility
 - Configure keyboards
-  - Add other languages needed
+  - [ ] Add other languages needed
 - Configure system bar icons
-  - For volume, also enable "play feedback sound when volume is changed"
-  - For bluetooth
-- Internet account - enable for contact app, ... etc.
-- Cleanup dock app icons, remove infrequently used ones
-- Git clone this repo. Run the script `macos-install.sh`, it installs and configures the important tools for daily use and dev tools.
+  - [ ] For volume, also enable "play feedback sound when volume is changed"
+  - [ ] For bluetooth
+- [ ] Internet account - enable for contact app, ... etc.
+- [ ] Cleanup dock app icons, remove infrequently used ones
+
+### Prepare development & work environment 
+
+- [ ] Git clone this repo. Run the script `macos-install.sh`, it installs and configures the important tools for daily use and dev tools.
 - Configure vscode
-  - Install `sync settings` extension, then, download the settings. Will need the gist ID or github token. Ours is at [google doc](https://docs.google.com/document/d/1GGaX4JhbbBAzFxMvFRIvef7nMDdFpmi_ZGQ7Evnvbno/edit). (You can store it somewhere else, just remember not to check into version control since this is a credential)
-  - Install the terminal beautify script
-- `optional-cli.sh` and `optional-gui.sh` - you can cherry pick apps that you want to install.
-- Open Google Drive Stream to configure for the first time.
+  - [ ] Install `sync settings` extension, then, download the settings. Will need the gist ID or github token. Ours is at [google doc](https://docs.google.com/document/d/1GGaX4JhbbBAzFxMvFRIvef7nMDdFpmi_ZGQ7Evnvbno/edit). (You can store it somewhere else, just remember not to check into version control since this is a credential)
+  - [ ] Install the terminal beautify script
+- [ ] `optional-cli.sh` and `optional-gui.sh` - you can cherry pick apps that you want to install.
+- [ ] Open Google Drive Stream to configure for the first time.
+- [ ] Clone active project repositories.
+    - [ ] Aquire credentials, and place them in proper locations in repositories.
+
