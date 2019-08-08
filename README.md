@@ -59,7 +59,7 @@ Bonus
 
 ## Initial Setup
 
-- [ ] Download XCode, AND open it for the first time. This will install the commandline tools for you. Please complete this step before proceeding, otherwise tools cannot be installed.
+- [ ] Even if you download Xcode and run it the first time, brew installation still requires you to install the command line tool again. So better just let the prompt guide you. ~~Download XCode, AND open it for the first time. This will install the commandline tools for you. Please complete this step before proceeding, otherwise tools cannot be installed.~~
 
 ### Setup System preferences
 
