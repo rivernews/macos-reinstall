@@ -29,9 +29,9 @@ Things to back up
 
 Steps
 
-1. Download the OS from App Store. (Press GET) Then quit.
+1. [x] Download the OS from App Store. (Press GET) Then quit.
 
-1. Run `sudo /Applications/Install\ macOS\ Mojave.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume`. " MyVolume is the name of the USB flash drive or other volume you're using. If it has a different name, replace MyVolume accordingly." (Apple)
+1. [x] Run `sudo /Applications/Install\ macOS\ Mojave.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume`. " MyVolume is the name of the USB flash drive or other volume you're using. If it has a different name, replace MyVolume accordingly." (Apple)
 
 ## Clean install from USB
 
