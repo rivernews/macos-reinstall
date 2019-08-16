@@ -35,7 +35,20 @@ unsetopt PROMPT_SP
 # mysql
 #export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
+
+
+# golang
+# export GOPATH=$HOME/go
+# export PATH=$PATH:$GOPATH/bin
+
+# google cloud sdk
+# source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+# source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+
+
+
 # pyenv config: https://github.com/pyenv/pyenv#homebrew-on-macos
+# needs to be place at the end of shell config because it changes PATH
 #
 # INSTALL A PYTHON VERSION FISRST
 #
@@ -47,16 +60,9 @@ unsetopt PROMPT_SP
 # show global python: pyenv global
 # set global python to python3.4.0: pyenv global 3.4.0
 # set local python to python3.4.0: pyenv local 3.4.0
+#
+# RESTART TERMINAL TO APPLY THE CHANGE
 
 if command -v pyenv 1>/dev/null 2>&1; then
     eval "$(pyenv init -)"
-    source $(pyenv root)/completions/pyenv.zsh
 fi
-
-# golang
-# export GOPATH=$HOME/go
-# export PATH=$PATH:$GOPATH/bin
-
-# google cloud sdk
-# source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
-# source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
