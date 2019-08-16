@@ -36,8 +36,21 @@ unsetopt PROMPT_SP
 #export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
 # pyenv config: https://github.com/pyenv/pyenv#homebrew-on-macos
+#
+# INSTALL A PYTHON VERSION FISRST
+#
+# show all available python versions to install: pyenv install -list
+# install a specific version of python e.g. 3.4.0 (you have to specify all the sub-version numbers): pyenv install 3.4.0
+#
+# SET VERSIONS TO USE
+#
+# show global python: pyenv global
+# set global python to python3.4.0: pyenv global 3.4.0
+# set local python to python3.4.0: pyenv local 3.4.0
+
 if command -v pyenv 1>/dev/null 2>&1; then
     eval "$(pyenv init -)"
+    source $(pyenv root)/completions/pyenv.zsh
 fi
 
 # golang
