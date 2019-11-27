@@ -24,6 +24,7 @@ read -n 1 -s -r -p $'INFO: Press any key to continue...\n' key_pressed && \
 # 2. Install a patched font
 echo -e "INFO: Installing patched font..." && \
 cp "Meslo LG M Regular for Powerline.ttf" ~/Library/Fonts && \
+cp Hasklig-1.1/* ~/Library/Fonts && \
 
 echo -e "INFO: Set the font 'Meslo LG M Regular for Powerline' in iTerm2" && \
 printf "After you finish, don't close iTerm2, we'll use it again later.\n" && \
@@ -77,6 +78,7 @@ fi
 
 # 6. Visual Studio Code config
 echo -e 'INFO: Set vscode "terminal.integrated.fontFamily": "Meslo LG M for Powerline"; also set shell used by vscode terminal to zsh.' && \
+echo -e 'INFO: Optionally, you can also set editor font to Hasklig, and enable ligature like this: "editor.fontLigatures": true' && \
 read -n 1 -s -r -p $'INFO: Press any key to continue...\n' key_pressed && \
 
 echo "INFO: SUCCESS." && return 
