@@ -51,7 +51,7 @@ git config --global difftool.vscode.cmd 'code --wait --diff $LOCAL $REMOTE'
 # https://stackoverflow.com/questions/2596805/how-do-i-make-git-use-the-editor-of-my-choice-for-commits/
 # this assumes that vsc is added to $PATH, and you can run `code <file or direoctory>` in terminal
 # if you install vsc by brew cask, this should already be done for you; otherwise, you'll have to setup $PATH first before the following line take effect
-git config --global core.editor "code"
+git config --global core.editor "code --wait"
 
 # Setup user name and email
 git config --global user.name ${USER_FULL_NAME}
