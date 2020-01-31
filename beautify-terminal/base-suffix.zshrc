@@ -45,7 +45,8 @@ unsetopt PROMPT_SP
 # source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
 # source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 
-
+# kubectl: add autocomplete permanently to your zsh shell
+echo "if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi" >> ~/.zshrc 
 
 # pyenv config: https://github.com/pyenv/pyenv#homebrew-on-macos
 # needs to be place at the end of shell config because it changes PATH
