@@ -45,13 +45,19 @@ unsetopt PROMPT_SP
 # source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
 # source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 
+
 # kubectl: add autocomplete permanently to your zsh shell
 echo "if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi" >> ~/.zshrc 
+
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# to let nvm auto detect local version:
+# https://github.com/nvm-sh/nvm#zsh
+
 
 # pyenv config: https://github.com/pyenv/pyenv#homebrew-on-macos
 # needs to be place at the end of shell config because it changes PATH
