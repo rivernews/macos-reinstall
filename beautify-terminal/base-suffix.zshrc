@@ -55,6 +55,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
+# common nvm commands:
+# nvm ls -> local installed versions
+# nvm ls-remote (--lts) -> available versions to install
+
 # to let nvm auto detect local version:
 # https://github.com/nvm-sh/nvm#zsh
 
