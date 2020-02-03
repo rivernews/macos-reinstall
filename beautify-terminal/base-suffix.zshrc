@@ -29,17 +29,18 @@ unsetopt PROMPT_SP
 
 
 ################################
-#     BASH CUSTOME EXPORT      #
+#      BASH CUSTOM EXPORT      #
 ################################
+
 
 # mysql
 #export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 
 
-
 # golang
 # export GOPATH=$HOME/go
 # export PATH=$PATH:$GOPATH/bin
+
 
 # google cloud sdk
 # source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
@@ -54,17 +55,30 @@ echo "if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi" >> ~
 export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
+#
 # common nvm commands:
 # nvm ls -> local installed versions
 # nvm ls-remote (--lts) -> available versions to install
-
+#
 # to let nvm auto detect local version:
 # https://github.com/nvm-sh/nvm#zsh
 
 
+# gitignore download command
+function gitignore() { curl -sLw "\n" https://www.gitignore.io/api/$@ ;}
+
+
+################################
+#   END BASH CUSTOM EXPORT     #
+################################
+
+
 # pyenv config: https://github.com/pyenv/pyenv#homebrew-on-macos
-# needs to be place at the end of shell config because it changes PATH
+# this block needs to be place at the end of shell config because it changes PATH
+if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init -)"
+fi
+# Pyenv guide:
 #
 # INSTALL A PYTHON VERSION FISRST
 #
@@ -78,7 +92,3 @@ export NVM_DIR="$HOME/.nvm"
 # set local python to python3.4.0: pyenv local 3.4.0
 #
 # RESTART TERMINAL TO APPLY THE CHANGE
-
-if command -v pyenv 1>/dev/null 2>&1; then
-    eval "$(pyenv init -)"
-fi
