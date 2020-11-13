@@ -92,3 +92,7 @@ fi
 # set local python to python3.4.0: pyenv local 3.4.0
 #
 # RESTART TERMINAL TO APPLY THE CHANGE
+#
+# If you got issues installing Python in macOS Big Sur,
+# try out this article:
+# https://qiita.com/craymaru/items/58e92fac99b5b0ec778f
