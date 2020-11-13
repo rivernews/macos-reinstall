@@ -74,7 +74,7 @@ printf "INFO: installing brew..."
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" </dev/null
 
 # pyenv is config in zsh script (beautify-terminal)
-brew install pyenv node
+brew install pyenv nvm
 
 
 
