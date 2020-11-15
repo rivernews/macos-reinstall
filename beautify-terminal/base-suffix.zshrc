@@ -62,6 +62,9 @@ export NVM_DIR="$HOME/.nvm"
 #
 # to let nvm auto detect local version:
 # https://github.com/nvm-sh/nvm#zsh
+#
+# install a version: `nvm install Erbium`, or `nvm install 12.19.0`
+# you may set the default node to latest installed version: `nvm alias default node`
 
 
 # gitignore download command
