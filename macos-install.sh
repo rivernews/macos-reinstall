@@ -87,9 +87,7 @@ brew install pyenv nvm
 
 # install GUI apps
 # brew tap caskroom/cask # no longer need to tap cask, can just use `brew cask` directly: https://stackoverflow.com/questions/58335410/error-caskroom-cask-was-moved-tap-homebrew-cask-cask-instead/58337898#58337898
-brew cask install google-chrome visual-studio-code google-drive-file-stream wechat
-
-
+brew install --cask google-chrome visual-studio-code google-drive-file-stream wechat
 
 
 

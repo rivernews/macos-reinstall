@@ -1,18 +1,18 @@
 # optional GUI
 
-brew cask install slack
+brew install --cask slack
 
-# brew cask install skype
+# brew install --cask skype
 
-brew cask install docker
+brew install --cask docker
 
-brew cask install sketch
-brew cask install imageoptim # effective image compression
+brew install --cask sketch
+brew install --cask imageoptim # effective image compression
 
-# brew cask install mongodb-compass-community
-# brew cask install sequel-pro-nightly
-brew cask install datagrip
+# brew install --cask mongodb-compass-community
+# brew install --cask sequel-pro-nightly
+brew install --cask datagrip
 
-# brew cask install ngrok
+# brew install --cask ngrok
 
-# brew cask install java8
+# brew install --cask java8
