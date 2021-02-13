@@ -2,7 +2,7 @@
 
 
 
-
+set -e
 
 # user input
 #
@@ -71,7 +71,7 @@ git config --global user.email ${USER_EMAIL}
 # install brew silently. See https://brew.sh
 # the last "</dev/null" is to silent install prompt, see https://stackoverflow.com/a/25535532
 printf "INFO: installing brew..."
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" </dev/null
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # pyenv is config in zsh script (beautify-terminal)
 brew install pyenv nvm
@@ -87,7 +87,7 @@ brew install pyenv nvm
 
 # install GUI apps
 # brew tap caskroom/cask # no longer need to tap cask, can just use `brew cask` directly: https://stackoverflow.com/questions/58335410/error-caskroom-cask-was-moved-tap-homebrew-cask-cask-instead/58337898#58337898
-brew install --cask google-chrome visual-studio-code google-drive-file-stream wechat
+brew install --cask docker google-chrome visual-studio-code google-drive-file-stream wechat
 
 
 
