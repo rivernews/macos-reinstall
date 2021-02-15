@@ -74,7 +74,8 @@ printf "INFO: installing brew..."
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # pyenv is config in zsh script (beautify-terminal)
-brew install pyenv nvm
+brew install pyenv
+# brew install nvm # nvm officially discourage the use of homebrew to install it, so will comment out here. Refer to nvm official site to see what's the better way to install it
 
 
 
@@ -87,7 +88,10 @@ brew install pyenv nvm
 
 # install GUI apps
 # brew tap caskroom/cask # no longer need to tap cask, can just use `brew cask` directly: https://stackoverflow.com/questions/58335410/error-caskroom-cask-was-moved-tap-homebrew-cask-cask-instead/58337898#58337898
-brew install --cask docker google-chrome visual-studio-code google-drive-file-stream wechat
+brew install --cask visual-studio-code
+# to adapt to M1, be careful about the version of GUI app below, and better to refer to homebrew cask to make sure they are M1 support first.
+# brew install --cask docker google-chrome visual-studio-code google-drive-file-stream wechat
+
 
 
 
