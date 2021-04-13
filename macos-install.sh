@@ -76,7 +76,8 @@ printf "INFO: installing brew..."
 # pyenv is config in zsh script (beautify-terminal)
 brew install pyenv
 # brew install nvm # nvm officially discourage the use of homebrew to install it, so will comment out here. Refer to nvm official site to see what's the better way to install it
-
+# something like:
+# curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 
 
 
