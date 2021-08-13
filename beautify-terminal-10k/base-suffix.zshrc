@@ -43,7 +43,7 @@ export EDITOR='code'
 
 
 # kubectl: add autocomplete permanently to your zsh shell
-echo "if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi" >> ~/.zshrc 
+if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi
 
 
 # nvm
