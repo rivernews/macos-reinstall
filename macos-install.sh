@@ -7,7 +7,7 @@ set -e
 # user input
 #
 #####
-echo "Enter sudo password (for installing homebrew):
+echo "Enter sudo password (for installing homebrew):"
 read PASSWORD
 
 echo "Enter user full name (for git):"
