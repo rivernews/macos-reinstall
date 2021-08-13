@@ -71,6 +71,7 @@ git config --global user.email ${USER_EMAIL}
 # install brew silently. See https://brew.sh
 # the last "</dev/null" is to silent install prompt, see https://stackoverflow.com/a/25535532
 printf "INFO: installing brew..."
+export CI=1
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # pyenv is config in zsh script (beautify-terminal)
