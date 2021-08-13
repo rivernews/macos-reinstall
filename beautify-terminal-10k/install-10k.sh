@@ -5,7 +5,7 @@
 # 1. install zsh (macos may already have this)
 # 2. install oh-my-zsh (for useful cli alias): https://github.com/ohmyzsh/ohmyzsh
 echo -e "INFO: Installing Oh my Zsh framework..." && \
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 # zsh syntax-highlighting - let shell commands keywords be recognized and displayed in green, etc
 # https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
