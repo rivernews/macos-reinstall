@@ -1,18 +1,16 @@
-# optional GUI
+# GUIs
 
-brew install --cask slack
+brew install --cask slack sketch google-drive
 
-# brew install --cask skype
+# M1 not supported
+# brew install --cask skype docker
 
-brew install --cask docker
-
-brew install --cask sketch
+# Optional
 brew install --cask imageoptim # effective image compression
-
 # brew install --cask mongodb-compass-community
 # brew install --cask sequel-pro-nightly
-brew install --cask datagrip
+# brew install --cask datagrip
 
+# Optional CLIs
 # brew install --cask ngrok
-
 # brew install --cask java8
