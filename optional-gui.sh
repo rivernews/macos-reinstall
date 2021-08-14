@@ -1,6 +1,8 @@
 # GUIs
 
-brew install --cask slack sketch google-drive
+brew install --cask slack google-drive
+# Pin Sketch version 72.4 to use it free
+brew install --cask https://github.com/Homebrew/homebrew-cask/blob/bf85486d8a5aa60cdc0622809e81d61ea43841ff/Casks/sketch.rb
 
 # M1 not supported
 # brew install --cask skype docker
