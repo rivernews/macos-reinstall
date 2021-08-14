@@ -8,7 +8,7 @@ brew install --cask https://github.com/Homebrew/homebrew-cask/blob/bf85486d8a5aa
 # brew install --cask skype docker
 
 # Optional
-brew install --cask imageoptim # effective image compression
+# brew install --cask imageoptim # effective image compression
 # brew install --cask mongodb-compass-community
 # brew install --cask sequel-pro-nightly
 # brew install --cask datagrip
