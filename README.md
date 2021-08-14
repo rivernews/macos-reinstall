@@ -1,27 +1,44 @@
-## When System Performance Deteriorates...
+# When System Performance Deteriorates...
+
+https://www.cipher-it.co.uk/wp-content/uploads/2017/11/ITCrow.jpg ![image](https://user-images.githubusercontent.com/15918424/129460257-81cd6c8e-4bd5-48d0-b3a8-b14d9d6de879.png)
+
+After many years of using all kinds of system, Windows, Mac included, the golden rule does not change.
+
+The new recent Windows version are more self-sustainable? Mac OS does a great job at recycling garbage files that pile up over time? Performance does not degrade over time? All bull shit.
+
+We all age, so do laptops and systems. How can we retain the blazing fast performance we enjoyed on day 1 - the day the laptop shipped and arrived?
+
+How to stand at the unbeatable position for your entire lifespan? The only solution is just obvious: 
+
+**Master Reinstalling OS!**
+
+Don't rely on local data, everything cloud please (or external drive, if privacy is a concern), if you have any important data that you can't afford losing.
+
+
+## To the rescue: Mac reinstall automation script
+
+We try to address the tedious reinstallation work by providing scripts that quickly sets up your mac (M1) laptop for software development work.
+
+See the section "How to use" below to see how to run the scripts.
 
 ### Issue: system occupying too much storage
+
+If you just have reinstalled awhile ago and your problem is just storage, you might not need reinstall, you can try to clean up your storage first.
+
+If you're using BigSur, there're useful tools in "About this mac > storage > manage..." to clean up your disk space.
 
 Due to misterious reason (or just poorly developed app). Good way to analyze storage is to run `du -d 1 -x -c -g /`. [See this post](https://forums.macrumors.com/threads/system-taking-up-285-gb-of-space.2106785/page-3).
 
 ## Let's backup to prep for reinstall
 
-Then it's time to consider reinstalling OS.
-
-Always painful thing to do. ...wait, is it? As long as we keep the most important things small, we should be able to go cloud, and then go light on local!
-
-Things to back up
-- [ ] Software app
-    - [ ] Manually installed
-    - [ ] GUI cask installed
-    - [ ] Command line installed
-- [ ] Software app configs
-- [ ] Github repo: git push all changes
-- [ ] Github repo: credentials that are excluded from version control
-- [ ] User Data
-    - [ ] Check /Downloads/
-    - [ ] Check /Desktop/
-    ...
+Reminder:
+- Personal files and data
+    - Download, Desktop folder
+- Local git repository
+    - Secrets that are git ignored.
+    - Remaining git commits that aren't pushed to remote yet?
+- App configs like
+    - Visual Studio Code settings, keyboard map - back up by uplaoding the settings by `Setting Sync` extension
 
 ## Creating bootable USB
 
@@ -29,9 +46,9 @@ Things to back up
 
 Steps
 
-1. [x] Download the OS from App Store. (Press GET) Then quit.
+1. Download the OS from App Store. (Press GET) Then quit.
 
-1. [x] Run `sudo /Applications/Install\ macOS\ Mojave.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume`. " MyVolume is the name of the USB flash drive or other volume you're using. If it has a different name, replace MyVolume accordingly." (Apple)
+1. Run `sudo /Applications/Install\ macOS\ Mojave.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume`. " MyVolume is the name of the USB flash drive or other volume you're using. If it has a different name, replace MyVolume accordingly." (Apple)
 
 ## Clean install from USB
 
@@ -45,9 +62,9 @@ Prequisite:
 Steps:
 
 1. Have your boot usb pluged in
-1. Restart laptop, and long press option.
+1. Restart laptop, and **long press option**.
 1. Will show booting options, choose USB (should be something like Mojave Insdtall).
-1. Will using USB to boot now. Then select dosk utility. Erase the main disk.
+1. Will using USB to boot now. Then select disk utility. Erase the main disk.
 1. Quit and go back to the main menu, now this time select Install Mojave.
 1. Follow the steps.
 
@@ -57,9 +74,24 @@ Bonus
 
 1. You can also consider using a SSD to setup the installer, [see this post](https://www.macworld.com/article/3284378/how-to-create-a-bootable-macos-mojave-installer-drive.html).
 
-## Initial Setup
+## How to use
 
-- [ ] Even if you download Xcode and run it the first time, brew installation still requires you to install the command line tool again. So better just let the prompt guide you. ~~Download XCode, AND open it for the first time. This will install the commandline tools for you. Please complete this step before proceeding, otherwise tools cannot be installed.~~
+Run automation scripts
+- Install command line tools first
+    - Try to git clone this repository, mac will prompt you then. Note: even if you download Xcode and run it the first time, brew installation still requires you to install the command line tool again. So better just let the prompt guide you.
+- Run scripts to install necessary tools and apps:
+
+```sh
+
+sh ./macos-install.sh
+cd beautify-terminal-10k
+sh ./install-10k.sh
+
+```
+
+- Basic set up apps config
+    - Visual Studio Code: install Sync Setting extension to restore settings and keyboard mappings. Can also manually input the gist and tokens - Ours is stored at [google doc](https://docs.google.com/document/d/1GGaX4JhbbBAzFxMvFRIvef7nMDdFpmi_ZGQ7Evnvbno/edit), please use your own!
+    - Open Google Drive to turn it on
 
 ### Setup System preferences
 
@@ -74,15 +106,4 @@ Bonus
   - [ ] For bluetooth
 - [ ] Internet account - enable for contact app, ... etc.
 - [ ] Cleanup dock app icons, remove infrequently used ones
-
-### Prepare development & work environment 
-
-- [ ] Git clone this repo. Run the script `macos-install.sh`, it installs and configures the important tools for daily use and dev tools.
-- Configure vscode
-  - [ ] Install `sync settings` extension, then, download the settings. Will need the gist ID or github token. Ours is at [google doc](https://docs.google.com/document/d/1GGaX4JhbbBAzFxMvFRIvef7nMDdFpmi_ZGQ7Evnvbno/edit). (You can store it somewhere else, just remember not to check into version control since this is a credential)
-  - [ ] Install the terminal beautify script
-- [ ] `optional-cli.sh` and `optional-gui.sh` - you can cherry pick apps that you want to install.
-- [ ] Open Google Drive Stream to configure for the first time.
-- [ ] Clone active project repositories.
-    - [ ] Aquire credentials, and place them in proper locations in repositories.
 
