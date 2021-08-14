@@ -91,13 +91,14 @@ brew install pyenv
 #####
 
 # install GUI apps
+export PASSWORD=${PASSWORD}
 # brew tap caskroom/cask # no longer need to tap cask, can just use `brew cask` directly: https://stackoverflow.com/questions/58335410/error-caskroom-cask-was-moved-tap-homebrew-cask-cask-instead/58337898#58337898
 brew install --cask visual-studio-code
 # install optional GUI apps (for M1 laptop)
 sh ./optional-cli.sh
 
-
-
+# unset PASSWORD to prevent leakage
+unset PASSWORD
 
 
 # Reference
