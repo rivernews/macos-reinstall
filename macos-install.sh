@@ -93,8 +93,8 @@ brew install pyenv
 # install GUI apps
 # brew tap caskroom/cask # no longer need to tap cask, can just use `brew cask` directly: https://stackoverflow.com/questions/58335410/error-caskroom-cask-was-moved-tap-homebrew-cask-cask-instead/58337898#58337898
 brew install --cask visual-studio-code
-# to adapt to M1, be careful about the version of GUI app below, and better to refer to homebrew cask to make sure they are M1 support first.
-# brew install --cask docker google-chrome visual-studio-code google-drive-file-stream wechat
+# install optional GUI apps (for M1 laptop)
+sh ./optional-cli.sh
 
 
 
