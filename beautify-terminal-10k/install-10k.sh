@@ -1,6 +1,7 @@
 # echo -e "INFO: Installing iterm2..." && \
 # brew cask install iterm2
 
+REPO_ROOT=$(git rev-parse --show-toplevel)
 
 # 1. install zsh (macos may already have this)
 # 2. install oh-my-zsh (for useful cli alias): https://github.com/ohmyzsh/ohmyzsh
@@ -25,3 +26,14 @@ cat base-suffix.zshrc >> ~/.zshrc
 
 echo -e "INFO: Installing fonts..." && \
 cp fonts/* ~/Library/Fonts
+
+echo -e "INFO: Making 10K the default MacOS terminal profile..."
+# osascript -e 'tell app "Terminal" to shut down'
+open ${REPO_ROOT}/beautify-terminal-10k/10K.terminal && \
+sleep 2 && \
+defaults write com.apple.terminal "Default Window Settings" "10K" && \
+defaults write com.apple.terminal "Startup Window Settings" "10K" && \
+sleep 1 && \
+osascript -e 'quit app "Terminal"'
+# Or automatically force quick by below - but existing Terminal will get closed, problematic especially user run this script by Terminal
+# pkill -x Terminal

@@ -1,13 +1,17 @@
 # GUIs
 
+set -e
+
 if [ "${PASSWORD}" == "" ]; then
    echo "Please provide your sudo password to install GUI apps:"
-   read PASSWORD
+   read -s PASSWORD
 fi
 
 echo ${PASSWORD} | brew install --cask slack google-drive
 # Pin Sketch version 72.4 to use it free
-echo ${PASSWORD} | brew install --cask https://github.com/Homebrew/homebrew-cask/blob/bf85486d8a5aa60cdc0622809e81d61ea43841ff/Casks/sketch.rb
+curl -L https://raw.githubusercontent.com/Homebrew/homebrew-cask/bf85486d8a5aa60cdc0622809e81d61ea43841ff/Casks/sketch.rb > sketch.rb
+echo ${PASSWORD} | brew install --cask ./sketch.rb
+rm sketch.rb
 
 # M1 not supported
 # brew install --cask skype docker

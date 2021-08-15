@@ -1,14 +1,16 @@
 #!/usr/bin/env bash
 
 
-
 set -e
+
+REPO_ROOT=$(git rev-parse --show-toplevel)
 
 # user input
 #
 #####
 echo "Enter sudo password (for installing homebrew):"
-read PASSWORD
+read -s PASSWORD
+sudo -v
 
 echo "Enter user full name (for git):"
 read USER_FULL_NAME
@@ -35,7 +37,7 @@ done
 
 # config git
 #
-##### 
+#####
 
 echo "INFO: setting git..."
 
@@ -74,7 +76,7 @@ git config --global user.email ${USER_EMAIL}
 # the last "</dev/null" is to silent install prompt, see https://stackoverflow.com/a/25535532
 printf "INFO: installing brew..."
 export CI=1
-echo ${PASSWORD} | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # pyenv is config in zsh script (beautify-terminal)
 brew install pyenv
@@ -95,7 +97,7 @@ export PASSWORD=${PASSWORD}
 # brew tap caskroom/cask # no longer need to tap cask, can just use `brew cask` directly: https://stackoverflow.com/questions/58335410/error-caskroom-cask-was-moved-tap-homebrew-cask-cask-instead/58337898#58337898
 brew install --cask visual-studio-code
 # install optional GUI apps (for M1 laptop)
-sh ./optional-cli.sh
+sh ${REPO_ROOT}/optional-gui.sh
 
 # unset PASSWORD to prevent leakage
 unset PASSWORD
