@@ -56,15 +56,17 @@ This works for Mojave 10.14.6
 
 Prequisite:
 
-1. Make sure you turn off hardware protection.
-1. Make sure you disable T2 chip security (for Macbook pro later than 2018) Please google for how to do this.
+1. Make sure you allow [booting from external drive](https://appleinsider.com/articles/19/01/15/how-to-make-new-t2-secured-macs-boot-from-external-drives).
+    - Hint: Long press "cmd + R", then choose "Startup Security Utility".
+3. Make sure you turn off hardware protection.
+4. Make sure you disable T2 chip security (for Macbook pro later than 2018) Please google for how to do this.
 
 Steps:
 
 1. Have your boot usb pluged in
 1. Restart laptop, and **long press option**.
-1. Will show booting options, choose USB (should be something like Mojave Insdtall).
-1. Will using USB to boot now. Then select disk utility. Erase the main disk.
+1. Will show booting options, choose USB (should be something like Mojave Install).
+1. Will using USB to boot now. Then select disk utility. **Erase the main disk**.
 1. Quit and go back to the main menu, now this time select Install Mojave.
 1. Follow the steps.
 
