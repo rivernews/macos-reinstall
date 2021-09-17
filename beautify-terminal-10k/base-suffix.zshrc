@@ -74,7 +74,7 @@ function gitignore() { curl -sLw "\n" https://www.gitignore.io/api/$@ ;}
 # pyenv config: https://github.com/pyenv/pyenv#homebrew-on-macos
 # this block needs to be place at the end of shell config because it changes PATH
 if command -v pyenv 1>/dev/null 2>&1; then
-    eval "$(pyenv init -)"
+    eval "$(pyenv init --path)"
 fi
 # Pyenv guide:
 #
