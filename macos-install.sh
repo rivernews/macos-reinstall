@@ -85,7 +85,7 @@ export CI=1
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 echo 'eval $(/opt/homebrew/bin/brew shellenv)' >> $HOME/.zshrc
-source ~/.zshrc
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # pyenv is config in zsh script (beautify-terminal)
 brew install pyenv
