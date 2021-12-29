@@ -11,6 +11,9 @@ REPO_ROOT=$(git rev-parse --show-toplevel)
 echo "Please install 10K first, if you already did, just press enter to continue"
 read -s _
 
+echo "Please run this script using zsh and not other shell, then press enter to continue"
+read -s _
+
 echo "Enter sudo password (for installing homebrew):"
 read -s PASSWORD
 sudo -v
@@ -82,6 +85,7 @@ export CI=1
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 echo 'eval $(/opt/homebrew/bin/brew shellenv)' >> $HOME/.zshrc
+source ~/.zshrc
 
 # pyenv is config in zsh script (beautify-terminal)
 brew install pyenv
