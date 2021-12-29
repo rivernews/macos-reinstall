@@ -64,7 +64,7 @@ Prequisite:
 Steps:
 
 1. Have your boot usb pluged in
-1. Restart laptop, and **long press option**.
+1. Restart laptop, and **long press option**. (for M1 MBP: long press power button for [disk utility wipe](https://support.apple.com/en-us/HT212030) as well as [boot from USB](https://appleinsider.com/articles/21/01/03/how-to-boot-an-apple-silicon-mac-from-an-external-drive))
 1. Will show booting options, choose USB (should be something like Mojave Install).
 1. Will using USB to boot now. Then select disk utility. **Erase the main disk**.
 1. Quit and go back to the main menu, now this time select Install Mojave.
