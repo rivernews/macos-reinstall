@@ -11,7 +11,7 @@ REPO_ROOT=$(git rev-parse --show-toplevel)
 echo "Please install 10K first, if you already did, just press enter to continue"
 read -s _
 
-echo "Please run this script using zsh and not other shell, then press enter to continue"
+echo "Please use shell sh to run this script, then press enter to continue"
 read -s _
 
 echo "Enter sudo password (for installing homebrew):"
