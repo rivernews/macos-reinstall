@@ -34,6 +34,7 @@ Due to misterious reason (or just poorly developed app). Good way to analyze sto
 Reminder:
 - Personal files and data
     - Download, Desktop folder
+- Voice memo
 - Local git repository
     - Secrets that are git ignored.
     - Remaining git commits that aren't pushed to remote yet?
