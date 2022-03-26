@@ -13,7 +13,7 @@ cat << EOF
 Install NVM
 Run below command in a separate console, then continue. Please refer to the nvm repo for latest version: https://github.com/nvm-sh/nvm
 
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 nvm install node # install latest node
 EOF
 read -s _
