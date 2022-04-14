@@ -7,9 +7,6 @@
 # have to put here at suffix because default .zshrc defined ZSH_THEME, we want to overwrite it.
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-# Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
-
 plugins=(
   git
   zsh-syntax-highlighting
