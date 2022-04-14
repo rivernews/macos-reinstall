@@ -69,25 +69,16 @@ function gitignore() { curl -sLw "\n" https://www.gitignore.io/api/$@ ;}
 
 
 # pyenv config: https://github.com/pyenv/pyenv#homebrew-on-macos
-# this block needs to be place at the end of shell config because it changes PATH
+# this block needs to be at the end of .zshrc because it changes PATH
+# if pyenv is not available, try to move below to the end of .zshrc
 if command -v pyenv 1>/dev/null 2>&1; then
     eval "$(pyenv init --path)"
 fi
 # Pyenv guide:
-#
-# INSTALL A PYTHON VERSION FISRST
-#
-# show all available python versions to install: pyenv install -list
-# install a specific version of python e.g. 3.4.0 (you have to specify all the sub-version numbers): pyenv install 3.4.0
-#
-# SET VERSIONS TO USE
-#
-# show global python: pyenv global
-# set global python to python3.4.0: pyenv global 3.4.0
-# set local python to python3.4.0: pyenv local 3.4.0
-#
+# pyenv install -list
+# pyenv install 3.4.0
+# pyenv global 3.4.0
 # RESTART TERMINAL TO APPLY THE CHANGE
-#
 # If you got issues installing Python in macOS Big Sur,
 # try out this article:
 # https://qiita.com/craymaru/items/58e92fac99b5b0ec778f
