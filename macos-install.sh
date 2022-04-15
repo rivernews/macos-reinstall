@@ -104,6 +104,7 @@ export PASSWORD=${PASSWORD}
 brew install --cask visual-studio-code
 # install optional GUI apps (for M1 laptop)
 sh ${REPO_ROOT}/optional-gui.sh
+sh ${REPO_ROOT}/optional-cli.sh
 
 # unset PASSWORD to prevent leakage
 unset PASSWORD
