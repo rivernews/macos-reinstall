@@ -112,4 +112,5 @@ sh ./install-10k.sh
 - [x] Sharing - Change computer network name
 - [x] Disable iCloud drive
   - [x] Disable photo
+- [x] Always open window in Tab
 
