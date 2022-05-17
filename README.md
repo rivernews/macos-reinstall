@@ -99,16 +99,17 @@ sh ./install-10k.sh
 ### Setup System preferences
 
 - Configure for trackpad 
-  - [ ] increase mouse pointer speed 
-  - [ ] enable App Expose - use 4 fingers
-  - [ ] drag in accessibility
+  - [x] increase mouse pointer speed 
+  - [x] enable App Expose - use 4 fingers
+  - [x] drag in accessibility
 - Configure keyboards
-  - [ ] Add other languages needed
+  - [x] Add other languages needed
 - Configure system bar icons "always show"
-  - [ ] For volume, also enable "play feedback sound when volume is changed"
-  - [ ] For bluetooth
-- Internet account - enable for contact app, ... etc.
-- Cleanup dock app icons, remove infrequently used ones
-- User and Groups
-  - [ ] Change computer network name
+  - [x] For volume, also enable "play feedback sound when volume is changed"
+  - [x] For bluetooth
+- [x] Internet account - enable for contact app, ... etc.
+- [x] Cleanup dock app icons, remove infrequently used ones
+- [x] Sharing - Change computer network name
+- [x] Disable iCloud drive
+  - [x] Disable photo
 
