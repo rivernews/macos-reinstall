@@ -107,8 +107,8 @@ sh ./install-10k.sh
 - Configure system bar icons "always show"
   - [ ] For volume, also enable "play feedback sound when volume is changed"
   - [ ] For bluetooth
-- [ ] Internet account - enable for contact app, ... etc.
-- [ ] Cleanup dock app icons, remove infrequently used ones
-- [ ] User and Groups
+- Internet account - enable for contact app, ... etc.
+- Cleanup dock app icons, remove infrequently used ones
+- User and Groups
   - [ ] Change computer network name
 
