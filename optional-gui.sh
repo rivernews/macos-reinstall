@@ -7,16 +7,14 @@ if [ "${PASSWORD}" == "" ]; then
    read -s PASSWORD
 fi
 
-echo ${PASSWORD} | brew install --cask slack google-drive zoom google-chrome webex-meetings
+echo ${PASSWORD} | brew install --cask slack google-drive zoom google-chrome webex-meetings sketch skype
 # Pin Sketch version 72.4 to use it free
 # curl -L https://raw.githubusercontent.com/Homebrew/homebrew-cask/bf85486d8a5aa60cdc0622809e81d61ea43841ff/Casks/sketch.rb > sketch.rb
 # echo ${PASSWORD} | brew install --cask ./sketch.rb
 # rm sketch.rb
-brew install --cask sketch
 
 # M1 not supported
 # brew install --cask docker
-brew install --cask skype
 
 # Optional
 # brew install --cask imageoptim # effective image compression
