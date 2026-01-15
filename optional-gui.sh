@@ -28,3 +28,5 @@ echo ${PASSWORD} | brew install --cask slack google-drive zoom google-chrome web
 # Optional CLIs
 # brew install --cask ngrok
 # brew install --cask java8
+
+brew install --cask monitorcontrol
