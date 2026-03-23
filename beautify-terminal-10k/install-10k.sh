@@ -33,7 +33,7 @@ open ${REPO_ROOT}/beautify-terminal-10k/10K.terminal && \
 sleep 2 && \
 defaults write com.apple.terminal "Default Window Settings" "10K" && \
 defaults write com.apple.terminal "Startup Window Settings" "10K" && \
-sleep 1 && \
-osascript -e 'quit app "Terminal"'
+sleep 1
+(osascript -e 'tell application "Terminal" to quit'; sleep 2; open -a Terminal) & disown
 # Or automatically force quick by below - but existing Terminal will get closed, problematic especially user run this script by Terminal
 # pkill -x Terminal
